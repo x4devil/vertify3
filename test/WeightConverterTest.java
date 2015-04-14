@@ -91,12 +91,42 @@ public class WeightConverterTest {
                 double resultRus = kg / values[systemRus[j]];
                 double resultUsa = kg / values[systemUsa[j]];
                 
+                assertEquals(resultSi, WeightConverter.convert(weight, systemSi[i], systemSi[j]), EPS);
                 assertEquals(resultRus, WeightConverter.convert(weight, systemSi[i], systemRus[j]), EPS);
                 assertEquals(resultUsa, WeightConverter.convert(weight, systemSi[i], systemUsa[j]), EPS);
             }
         }
-    }
+    } 
     
+    public void testConvertRus() {
+        double weight = 10;
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                double kg = WeightConverter.convertToKillogram(weight, systemRus[i]);
+                double resultSi = kg / values[systemSi[j]];
+                double resultRus = kg / values[systemRus[j]];
+                double resultUsa = kg / values[systemUsa[j]];
+                
+                assertEquals(resultSi, WeightConverter.convert(weight, systemRus[i], systemSi[j]), EPS);
+                assertEquals(resultRus, WeightConverter.convert(weight, systemRus[i], systemRus[j]), EPS);
+                assertEquals(resultUsa, WeightConverter.convert(weight, systemRus[i], systemUsa[j]), EPS);
+            }
+        }
+    } 
     
-    
+    public void testConvertUsa() {
+        double weight = 10;
+        for(int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++) {
+                double kg = WeightConverter.convertToKillogram(weight, systemUsa[i]);
+                double resultSi = kg / values[systemSi[j]];
+                double resultRus = kg / values[systemRus[j]];
+                double resultUsa = kg / values[systemUsa[j]];
+                
+                assertEquals(resultSi, WeightConverter.convert(weight, systemUsa[i], systemSi[j]), EPS);
+                assertEquals(resultRus, WeightConverter.convert(weight, systemUsa[i], systemRus[j]), EPS);
+                assertEquals(resultUsa, WeightConverter.convert(weight, systemUsa[i], systemUsa[j]), EPS);
+            }
+        }
+    } 
 }
