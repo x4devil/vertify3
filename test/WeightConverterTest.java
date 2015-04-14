@@ -87,6 +87,7 @@ public class WeightConverterTest {
         for(int i = 0; i < 3; i++) {
             for(int j = 0; j < 3; j++) {
                 double kg = WeightConverter.convertToKillogram(weight, systemSi[i]);
+                double resultSi = kg / values[systemSi[j]];
                 double resultRus = kg / values[systemRus[j]];
                 double resultUsa = kg / values[systemUsa[j]];
                 

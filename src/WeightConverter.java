@@ -32,6 +32,6 @@ public class WeightConverter {
     }
     
     public static double convert(double weight, int systemFrom, int systemTo) {
-        return 0.0;
+        return convertToKillogram(weight, systemFrom) / values[systemTo];
     }
 }
