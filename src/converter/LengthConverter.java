@@ -29,10 +29,23 @@ public class LengthConverter {
         0.711//аршин
     };
     
+    /**
+     * Конвертирование длины в метры
+     * @param length длина
+     * @param system система
+     * @return длина в метрах
+     */
     public static double convertToMeter(double length, int system) {
         return length * values[system];
     }
     
+    /**
+     * Ковертирование
+     * @param length длина 
+     * @param systemFrom текущая система
+     * @param systemTo необходимая система
+     * @return конвертированая величина
+     */
     public static double convert(double length, int systemFrom, int systemTo) {
         return convertToMeter(length, systemFrom) / values[systemTo];
     }

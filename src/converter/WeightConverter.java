@@ -29,10 +29,23 @@ public class WeightConverter {
         0.00004 //Доля
     };
     
+    /**
+     * КОнвертирование массы в киллограммы
+     * @param weight масса
+     * @param system система
+     * @return масса в киллограмах
+     */
     public static double convertToKillogram(double weight, int system) {
         return weight * values[system];
     }
     
+    /**
+     * Конвертирование массы
+     * @param weight масса
+     * @param systemFrom текущая система
+     * @param systemTo необходимая система
+     * @return конвертированая масса
+     */
     public static double convert(double weight, int systemFrom, int systemTo) {
         return convertToKillogram(weight, systemFrom) / values[systemTo];
     }
