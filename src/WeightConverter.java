@@ -1,6 +1,3 @@
-
-package converter;
-
 public class WeightConverter {
     //Система СИ
     public static final int GRAM = 0; //Грамм
@@ -32,5 +29,9 @@ public class WeightConverter {
     
     public static double convertToKillogram(double weight, int system) {
         return weight * values[system];
+    }
+    
+    public static double convert(double weight, int systemFrom, int systemTo) {
+        return 0.0;
     }
 }
