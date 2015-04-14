@@ -32,4 +32,8 @@ public class LengthConverter {
     public static double convertToMeter(double length, int system) {
         return length * values[system];
     }
+    
+    public static double convert(double length, int systemFrom, int systemTo) {
+        return 0.0;
+    }
 }
