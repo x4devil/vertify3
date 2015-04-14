@@ -30,6 +30,6 @@ public class LengthConverter {
     };
     
     public static double convertToMeter(double length, int system) {
-        return 0.0;
+        return length * values[system];
     }
 }
