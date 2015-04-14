@@ -31,6 +31,6 @@ public class WeightConverter {
     };
     
     public static double convertToKillogram(double weight, int system) {
-        return 0.0;
+        return weight * values[system];
     }
 }
