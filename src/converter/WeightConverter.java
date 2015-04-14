@@ -1,3 +1,5 @@
+package converter;
+
 public class WeightConverter {
     //Система СИ
     public static final int GRAM = 0; //Грамм
